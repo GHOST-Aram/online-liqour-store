@@ -1,6 +1,5 @@
 import React from 'react'
 import Button from './Button'
-import Heading from './Heading'
 
 const calculateDiscount = (previousPrice, currentPrice) =>{
     return Math.floor(((currentPrice - previousPrice) / previousPrice) * 100)
