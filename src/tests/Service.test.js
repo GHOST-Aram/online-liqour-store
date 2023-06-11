@@ -57,7 +57,7 @@ test('Renders aria-label for open days', ()=>{
 })
 
 test('Renders working hours', () =>{
-    render(<Service WorkingHours = {'24hrs'} />)
+    render(<Service workingHours = {'24hrs'} />)
 
     const workingHours = screen.getByText(/24hrs/)
     expect(workingHours).toBeInTheDocument()

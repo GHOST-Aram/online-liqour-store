@@ -33,6 +33,11 @@ button:hover{
 .position-relative{
     position: relative;
 }
+.services{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
 .showcase{
     /* height: 70vh; */
     background-image: linear-gradient(white, gray);
