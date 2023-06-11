@@ -14,9 +14,7 @@ const brands = [
     { id:'brand-bw', name: 'Black and White Whisky',logo: black_and_white,},
     { id:'brand-jd', name: 'Jack Daniels',logo: jack_daniels,},
     { id:'brand-jw', name: 'Jonnie Walker',logo: jonnie_walker},
-    { id:'brand-ama', name: 'Amarula',logo: amarula, },
     { id:'brand-gfd', name: 'Glendffidich', logo: glendffidich},
-    { id:'brand-jms', name: 'Jameson', logo: jameson},
     { id:'brand-rmart', name: 'Remy Martin', logo: remy_martin}
 ]
 const FeaturedBrands = () => {
