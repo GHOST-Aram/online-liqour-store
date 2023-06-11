@@ -10,7 +10,7 @@ const Item = (props) => {
     const productDiscount = calculateDiscount(previousPrice, currentPrice)
 
     return (
-        <div className='item p-2 rounded-md'>
+        <div className='item p-2 rounded-md bg-slate-300'>
             <img src={productImage} alt={productName} />
             <h2 aria-label='product name'
                 className='font-bold text-red-700 text-start'

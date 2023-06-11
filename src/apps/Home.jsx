@@ -13,10 +13,10 @@ const Home = () => {
 
 
   return (
-    <Main>
-		<Showcase/>
-		<ShelvedProducts />
-    </Main>
+    <>
+      <Showcase/>
+      <ShelvedProducts />
+    </>
   )
 }
 

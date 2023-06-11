@@ -6,10 +6,11 @@
     outline: dotted 2px #18181B;
 }
 button:hover{
-    transform: scaleY(1.1);    
+    transform: scaleY(1.1);
+    transition: all .3s;
 }
 .item:hover{
-    box-shadow: 5px 5px 5px;
+    box-shadow: 2px 2px 5px 2px;
     transform: translateY(-10px);
     transition: all .3s;
 }

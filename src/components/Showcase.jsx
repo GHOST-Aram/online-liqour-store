@@ -38,7 +38,6 @@ const Showcase = () => {
                 src={canadianHunters} alt="Canadian Hunters" />
         </div>
     </div>
-    <div className="my-4 border-b-2 border-solid border-zinc-900"></div>
     </Section>
   )
 }
