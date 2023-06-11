@@ -30,13 +30,13 @@ test('Renders aria-label for customers name', () =>{
 test('Renders customers message', () =>{
     render(<Review message = {'We loved it at valhala'} />)
 
-    const message = screen.getByText(/We loved it at Valhala/)
+    const message = screen.getByText(/We loved it at Valhala/i)
     expect(message).toBeInTheDocument()
 })
 
 test('Renders arial-label for message', () =>{
     render(<Review/>)
 
-    const messageNode = screen.getAllByLabelText('customers message')
+    const messageNode = screen.getByLabelText('message')
     expect(messageNode).toBeInTheDocument()
 })
