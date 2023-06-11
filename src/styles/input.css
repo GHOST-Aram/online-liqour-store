@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+*:focus{
+    outline: dotted 2px #18181B;
+}
+button:hover{
+    transform: scaleY(1.1);    
+}
+.item:hover{
+    box-shadow: 5px 5px 5px;
+    transform: translateY(-10px);
+    transition: all .3s;
+}
+.items{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.items-center{
+    align-items: center;
+}
+.item img{
+    height: 250px;
+}
 #logo{
     max-width: 300px;    
     min-width: 100px;
@@ -18,6 +39,12 @@
 .showcase-img{
     max-width: 300px;
 }
+.text-crossed{
+    text-decoration: line-through;
+}
+.text-start{
+text-align: start;
+}
 .text-underline{
     text-decoration: underline;
 }
@@ -27,4 +54,7 @@
 
 .w-60{
     width: 60%;
+}
+.w-full{
+    width: 100%;
 }

@@ -605,6 +605,11 @@ video {
   }
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -618,6 +623,10 @@ video {
   display: flex;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -628,6 +637,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-8 {
@@ -665,6 +678,10 @@ video {
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -681,6 +698,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-start {
+  text-align: start;
 }
 
 .text-lg {
@@ -707,6 +728,16 @@ video {
   color: rgb(20 83 45 / var(--tw-text-opacity));
 }
 
+.text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
 .text-red-900 {
   --tw-text-opacity: 1;
   color: rgb(127 29 29 / var(--tw-text-opacity));
@@ -715,6 +746,40 @@ video {
 .text-slate-300 {
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity));
+}
+
+.text-slate-500 {
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity));
+}
+
+*:focus{
+  outline: dotted 2px #18181B;
+}
+
+button:hover{
+  -webkit-transform: scaleY(1.1);
+          transform: scaleY(1.1);
+}
+
+.item:hover{
+  box-shadow: 5px 5px 5px;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  transition: all .3s;
+}
+
+.items{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.items-center{
+  align-items: center;
+}
+
+.item img{
+  height: 250px;
 }
 
 #logo{
@@ -735,6 +800,14 @@ video {
   max-width: 300px;
 }
 
+.text-crossed{
+  text-decoration: line-through;
+}
+
+.text-start{
+  text-align: start;
+}
+
 .text-underline{
   text-decoration: underline;
 }
@@ -745,6 +818,10 @@ video {
 
 .w-60{
   width: 60%;
+}
+
+.w-full{
+  width: 100%;
 }
 
 @media (min-width: 768px) {
