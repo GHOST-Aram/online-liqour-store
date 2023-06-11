@@ -5,6 +5,19 @@
 *:focus{
     outline: dotted 2px #18181B;
 }
+.brand{
+    box-shadow: 2px 2px 5px 2px;
+    height: 100px;
+}
+.brand:hover{
+    transform: translateY(-20px);
+    transition: all .3s;
+}
+.featured-brands{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
 button:hover{
     transform: scaleY(1.1);
     transition: all .3s;

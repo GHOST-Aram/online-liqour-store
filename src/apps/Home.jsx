@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import Showcase from '../components/Showcase';
 import ShelvedProducts from '../components/ShelvedProducts';
 import OtherServices from '../components/OtherServices';
+import FeaturedBrands from '../components/FeaturedBrands';
 
 
 const Home = () => {
@@ -15,10 +16,11 @@ const Home = () => {
 
 	return (
 		<>
-		<Showcase/>
-		<ShelvedProducts />
-		<OtherServices />
-		<CustomerReviews />
+			<Showcase/>
+			<ShelvedProducts />
+			<OtherServices />
+			<CustomerReviews />
+			<FeaturedBrands />
 		</>
 	)
 }

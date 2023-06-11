@@ -41,7 +41,7 @@ const CustomerReviews = () => {
         
         <Heading level={1}
             className={'font-bold my-4 text-slate-300 pl-4 py-2 bg-red-700'}
-        >{'Our Customers Say'}</Heading>
+        >Our Customers Say</Heading>
         <div aria-label='customer reviews' className="reviews mt-8">
             {
                 reviews.map( review => 
