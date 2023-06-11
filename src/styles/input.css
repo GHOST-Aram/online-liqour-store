@@ -7,6 +7,24 @@
     min-width: 100px;
 }
 
-nav li a{
-    
+
+.position-relative{
+    position: relative;
+}
+.showcase{
+    /* height: 70vh; */
+    background-image: linear-gradient(white, gray);
+}
+.showcase-img{
+    max-width: 300px;
+}
+.text-underline{
+    text-decoration: underline;
+}
+.text-xxl{
+    font-size: 2rem;
+}
+
+.w-60{
+    width: 60%;
 }

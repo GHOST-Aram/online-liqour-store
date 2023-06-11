@@ -1,14 +1,14 @@
 import React from 'react'
 import '../styles/index.css'
 import Header from '../components/Header'
-import Main from '../components/Main';
 import RouteSwitch from './RouteSwitch'
+import Footer from '../components/Footer';
 function App() {
   return (
     <div className="App container">
 		<Header/>
-		<Main><RouteSwitch /></Main>
-		
+		<RouteSwitch />
+		<Footer/>
     </div>
   );
 }
