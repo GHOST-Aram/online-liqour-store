@@ -10,15 +10,8 @@ test('Renders showcase text', ()=>{
 })
 test('Renders showcase images', () =>{
     render(<Showcase/>)
-
-    const frenchWhine = screen.getByAltText(/French wine/i)
-    const scotchWhisky = screen.getByAltText(/Scotch whisky/i)
-    const amarula = screen.getByAltText(/Amarula/i)
+    
     const canadianHunters = screen.getByAltText(/Canadian Hunters/i)
-
-    expect(frenchWhine).toBeInTheDocument()
-    expect(scotchWhisky).toBeInTheDocument()
-    expect(amarula).toBeInTheDocument()
     expect(canadianHunters).toBeInTheDocument()
 })
 

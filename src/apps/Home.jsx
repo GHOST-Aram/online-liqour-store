@@ -20,7 +20,7 @@ const Home = () => {
 			<Heading level={2}
 				className={'font-bold text-underline'}
 			>
-				Available Products</Heading>
+				On Our Shelves & More</Heading>
 		</Section>
     </Main>
   )

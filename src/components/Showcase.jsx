@@ -33,7 +33,7 @@ const Showcase = () => {
         <div className='flex showcase-'>
              <img
                 className='position-absolute showcase-img' 
-                src={canadianHunters} alt="Amarula" />
+                src={canadianHunters} alt="Canadian Hunters" />
         </div>
     </div>
   )
