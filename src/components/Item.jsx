@@ -10,9 +10,9 @@ const Item = (props) => {
     return (
         <div>
             <img src={productImage} alt={productName} />
-            <Heading level = {2}>{productName}</Heading>
+            <h2 aria-label='product name'>{productName}</h2>
             <div>
-                <Heading level={1}>Ksh. {currentPrice}</Heading>
+                <h1 aria-label='current price'>Ksh. {currentPrice}</h1>
                 <span aria-label='previous price'>{previousPrice}</span>
                 <span aria-label='discount'>{productDiscount}%</span>
             </div>

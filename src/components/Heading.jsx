@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Heading = ({children, level, className,ariaLabel}) => {
+const Heading = ({children, level, className}) => {
   
     switch(level){
         case 1: return <h1 className={className} >{children}</h1>
