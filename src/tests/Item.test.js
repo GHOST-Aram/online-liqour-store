@@ -1,9 +1,8 @@
 import { render, screen} from '@testing-library/react'
 import Item from '../components/Item'
-import black_and_white from '../images/drinks/black-and-white-whisky.png'
 
 test('Renders Product image', () =>{
-    render(<Item productImage = {black_and_white}/>)
+    render(<Item />)
 
     const productImg = screen.getByRole('img')
     expect(productImg).toBeInTheDocument()
