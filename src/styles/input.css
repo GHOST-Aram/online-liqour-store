@@ -13,6 +13,9 @@
     transform: translateY(-20px);
     transition: all .3s;
 }
+.cart-item img{
+    max-width: 100px;
+}
 .featured-brands{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -27,7 +30,8 @@ button:hover{
     transform: scaleY(1.1);
     transition: all .3s;
 }
-.item:hover, .service:hover, .review:hover{
+
+.item:hover, .service:hover, .review:hover, .cart-item:hover{
     box-shadow: 2px 2px 5px 2px;
     transform: translateY(-10px);
     transition: all .3s;
