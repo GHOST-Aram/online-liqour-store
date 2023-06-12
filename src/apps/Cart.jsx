@@ -6,17 +6,6 @@ import Heading from '../components/Heading'
 import '../styles/index.css'
 import CartSummary from '../components/CartSummary'
 
-items.forEach(item => item.quantity = 0)
-
-const totalQuantity = items.reduce(
-	(accumulator, current) => accumulator + current.quantity
-)
-const orderTotal = items.reduce(
-	(accumulator, current) => (accumulator + 
-		current.quantity * current.currentPrice
-		)
-) 
-
 const Cart = () => {
 
 	useEffect(()=>{
