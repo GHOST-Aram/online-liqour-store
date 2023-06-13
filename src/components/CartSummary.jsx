@@ -12,12 +12,18 @@ const CartSummary = ({orderTotal, totalQuantity}) => {
                 CART SUMMARY
             </Heading> 
             <div className="px-4">
-                <Heading level={2}className={'my-4 font-bold'}>
-                    Quantity Purchased: <span className="text-red-700">{totalQuantity}</span> 
-                </Heading>
-                <Heading level={1} className={'mb-4 font-bold'}>
-                    Total: Ksh <span className="text-red-700">{orderTotal}</span> 
-                </Heading>
+                <div className="flex my-4  justify-between">
+                    <Heading level={2}className={'font-bold'}>
+                        Quantity Purchased: 
+                    </Heading>
+                    <span className=" font-bold text-red-700">{totalQuantity}</span> 
+                </div>
+                <div className="flex mb-4  justify-between">
+                    <Heading level={1} className={'font-bold'}>
+                        Total: 
+                    </Heading>
+                    <span className="font-bold text-red-700">Ksh {orderTotal}</span> 
+                </div>
             </div>
             <Button className={'w-full font-bold'} >{'CHECKOUT'}</Button>
         </aside>

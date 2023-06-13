@@ -27,8 +27,8 @@ const Home = () => {
 				<div className="items">
 					{
 						items.map(item =>
-							<HomeItem item = {item} />
-							)
+							<HomeItem key={item.id} item = {item} />
+						)
 					}
 				</div>
 			</Section>

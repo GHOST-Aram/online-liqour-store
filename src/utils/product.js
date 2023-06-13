@@ -246,7 +246,7 @@ export const items = [
 	{
 		id: uniqid(),
 		image: black_and_white, name:'Black and white whisky',
-		currentPrice: 1200, previousPrice: 1500,quantity: 6,
+		currentPrice: 1200, previousPrice: 1500,quantity: 1,
 		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
 			+'Officiis ipsum iste repellat vitae harum quisquam' 
 			+'facilis reprehenderit illo architecto quos minima '

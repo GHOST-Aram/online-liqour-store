@@ -1,4 +1,4 @@
-export class Cart{
+export class CartHandler{
     #orders
     constructor(orders){
         this.#orders = orders
@@ -18,7 +18,7 @@ export class Cart{
     }
     decrementItemQuantity = (item) => {
         this.#orders.forEach(element => {
-            if(element.id === item.id && element.quantity > 0){
+            if(element.id === item.id && element.quantity > 1){
                 element.quantity --
             }
         });
@@ -33,7 +33,7 @@ export class Cart{
     incrementItemQuantity = (item) =>{
         this.#orders.forEach(element => {
             if(element.id === item.id){
-                element.quantity ++
+                element.quantity  = element.quantity ++
             }
         });
         

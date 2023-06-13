@@ -1,6 +1,6 @@
 import React from 'react'
 import QuantityButtons from './QuantityButtons'
-const CartItem = ({item}) => {
+const CartItem = ({item, orders, setOrders}) => {
 	
 	return (
 	<div aria-label='cart item' 
@@ -13,7 +13,9 @@ const CartItem = ({item}) => {
 			<div className='flex flex-row justify-between'>
 				<h2 aria-label='price'className='font-bold'>Ksh. {item.currentPrice}</h2>
 				<QuantityButtons 
-					quantity={item.quantity}
+					item = {item}
+					orders = {orders} 
+					setOrders = {setOrders}
 				/>
 			</div>
 		</div>

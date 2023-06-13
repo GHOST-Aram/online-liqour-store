@@ -4,8 +4,15 @@ import CartItem from '../components/CartItem'
 import Heading from '../components/Heading'
 import '../styles/index.css'
 import CartSummary from '../components/CartSummary'
+import { CartHandler } from '../utils/Cart'
 
 const Cart = ({orders, setOrders}) => {
+	const cart = new CartHandler(orders)
+
+	const orderTotal = cart.calculateOrderToTal()
+	const totalQuantity = cart.getTotalQuantity()
+
+	
 	useEffect(()=>{
 		document.title = 'Valhala Tavern - Cart'
 	}, [])
@@ -22,6 +29,8 @@ const Cart = ({orders, setOrders}) => {
 							orders.map(item =>
 								<CartItem 
 									key={item.id} 
+									orders = {orders}
+									setOrders = {setOrders}
 									item = {item}
 								/>
 							)
@@ -29,7 +38,10 @@ const Cart = ({orders, setOrders}) => {
 					</div>
 				</div>
 				<div className='lg:w-2/5'>
-					<CartSummary totalQuantity={12} orderTotal={'23,000'}/>			
+					<CartSummary 
+						totalQuantity={totalQuantity} 
+						orderTotal={orderTotal}
+					/>			
 				</div>
 			</div>
 		</Section>
