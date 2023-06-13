@@ -1,11 +1,14 @@
 import Heading from './Heading'
-import Item from '../components/Item';
+import Item from './Item';
 import React from 'react'
 import Section from './Section'
 
+
+
 const ShelvedProducts = ({items, heading}) => {
-  return (
-    <Section>
+
+	return (
+		<Section>
 			<Heading level={2}
 				className={'font-bold my-4 text-slate-300 pl-4 py-2 bg-red-700'}
 			>{heading}
@@ -13,20 +16,15 @@ const ShelvedProducts = ({items, heading}) => {
 			<div className='text-center items'>
 				{
 					items.map(item =>
-						
 						<Item 
 							key = {item.id}
-							productImage = {item.image} 
-							productName = {item.name}
-							previousPrice = {item.previousPrice}
-							currentPrice = {item.currentPrice}
+							item = {item}
 						/>
-						
 					)
 				}
 			</div>
 		</Section>
-  )
+	)
 }
 
 export default ShelvedProducts

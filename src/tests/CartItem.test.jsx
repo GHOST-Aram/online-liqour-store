@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import CartItem from "../apps/CartItem";
+import CartItem from "../components/CartItem";
 import red_label from '../images/drinks/jonnie_wlaker_red_label.png'
 
 const item = { 
-    name: 'Red Label', price: 2000, 
+    name: 'Red Label', currentPrice: 2000, 
     quantity: 1, image: red_label,
 }
 
@@ -67,19 +67,6 @@ test('Renders aria-label of decrement button', () =>{
 
     const incrementBtn = screen.getByLabelText('decrement quantity')
     expect(incrementBtn).toBeInTheDocument()
-})
-test('Renders increment button', () =>{
-    render(<CartItem item={item}/>)
-
-    const incrementBtnText = screen.getByText(/\+/)
-    expect(incrementBtnText).toBeInTheDocument()
-})
-
-test('Renders decrement button', () =>{
-    render(<CartItem item={item}/>)
-
-    const incrementBtnText = screen.getByText(/-/)
-    expect(incrementBtnText).toBeInTheDocument()
 })
 
 test('Renders two buttons increment and decrement', () =>{

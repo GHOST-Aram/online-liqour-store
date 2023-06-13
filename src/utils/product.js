@@ -19,118 +19,262 @@ import remy_marting from '../images/drinks/remy-martin.png'
 import drc_dorman from '../images/drinks/drc-domain.png'
 import dalmore_island from '../images/drinks/dalmore_island_malt.png'
 import white_walker from '../images/drinks/white_walker.png'
+import uniqid from 'uniqid'
 
 
 export const wines = [
 
 	{
-		id: 'item-3',image: amarula, name:'Amarula',
-		currentPrice: 1400, previousPrice: 1750
+		id: uniqid(),image: amarula, name:'Amarula',
+		currentPrice: 1400, previousPrice: 1750,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
     {
-		id: 'item-fr',image: french_wine, name:'19th Century French Wine',
-		currentPrice: 4500, previousPrice: 4820 
+		id: uniqid(),image: french_wine, name:'19th Century French Wine',
+		currentPrice: 4500, previousPrice: 4820 ,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
     {
-		id: 'item-crb',image: carabus_malr, name:'Carabian Wine 1998',
-		currentPrice: 2800, previousPrice: 3102
+		id: uniqid(),image: carabus_malr, name:'Carabian Wine 1998',
+		currentPrice: 2800, previousPrice: 3102,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
     {
-		id: 'item-srcea',image: screaming_eagle, name:'Screaming Eagle 1997',
-		currentPrice: 3200, previousPrice: 3310 
+		id: uniqid(),image: screaming_eagle, name:'Screaming Eagle 1997',
+		currentPrice: 3200, previousPrice: 3310 ,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
     {
-		id: 'item-remyMA',image: remy_marting, name:'Remy Martin',
-		currentPrice: 1458, previousPrice: 1546 
+		id: uniqid(),image: remy_marting, name:'Remy Martin',
+		currentPrice: 1458, previousPrice: 1546 ,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
     {
-		id: 'item-der',image: drc_dorman, name:'French Wine Drc',
-		currentPrice: 3100, previousPrice: 3244
+		id: uniqid(),image: drc_dorman, name:'French Wine Drc',
+		currentPrice: 3100, previousPrice: 3244,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
     {
-		id: 'item-dis',image: dalmore_island, name:'Dalmore Island Malt',
-		currentPrice: 4590, previousPrice: 4691 
+		id: uniqid(),image: dalmore_island, name:'Dalmore Island Malt',
+		currentPrice: 4590, previousPrice: 4691 ,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
+	},
+	{
+		id: uniqid(),image: drc_dorman, name:'French Wine Drc',
+		currentPrice: 3100, previousPrice: 3244,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 ]
 
 
 export const whiskies = [
 	{
-		id: 'item-1',image: black_and_white, name:'Black and white whisky',
-		currentPrice: 1200, previousPrice: 1500
+		id: uniqid(),
+		image: black_and_white, name:'Black and white whisky',
+		currentPrice: 1200, previousPrice: 1500,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id: 'item-2',image: red_label, name:'Jonnie walker red labe;',
-		currentPrice: 1000, previousPrice: 1450
+		id: uniqid(),
+		image: red_label, name:'Jonnie walker red labe;',
+		currentPrice: 1000, previousPrice: 1450,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id: 'item-4',image: jack_daniels, name:'Jack Daniels',
-		currentPrice: 3100, previousPrice: 3700
+		id: uniqid(),
+		image: jack_daniels, name:'Jack Daniels',
+		currentPrice: 3100, previousPrice: 3700,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id:'item-alsns', image: all_seasons, name:'All Seasons',
-		currentPrice: 800, previousPrice: 1020
+		id: uniqid(),
+		image: all_seasons, name:'All Seasons',
+		currentPrice: 800, previousPrice: 1020,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id:'item-jwal', image: jonnie_walker_black, name:'Black Label',
-		currentPrice: 2100, previousPrice: 2320
+		id: uniqid(),
+		image: jonnie_walker_black, name:'Black Label',
+		currentPrice: 2100, previousPrice: 2320,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id:'item-redl', image: jonnie_walker_red, name:'Red Label',
-		currentPrice: 2100, previousPrice: 2300
+		id: uniqid(),
+		image: jonnie_walker_red, name:'Red Label',
+		currentPrice: 2100, previousPrice: 2300,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id:'item-greenl', image: jonnie_walker_green, name:'Green Label',
-		currentPrice: 2100, previousPrice: 2314 
+		id: uniqid(),
+		image: jonnie_walker_green, name:'Green Label',
+		currentPrice: 2100, previousPrice: 2314 ,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id:'item-blue', image: blue_label, name:'Blue Label',
-		currentPrice: 2100, previousPrice: 2300 
+		id: uniqid(),
+		image: blue_label, name:'Blue Label',
+		currentPrice: 2100, previousPrice: 2300 ,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id:'item-candian', image: canadian_hunter, name:'Hunters Choice',
-		currentPrice: 1500, previousPrice: 1580
+		id: uniqid(),
+		image: canadian_hunter, name:'Hunters Choice',
+		currentPrice: 1500, previousPrice: 1580,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id:'item-can2', image: canadian_hunter2, name:'Hunters Choice',
-		currentPrice: 1700, previousPrice: 2000
+		id: uniqid(),
+		image: canadian_hunter2, name:'Hunters Choice',
+		currentPrice: 1700, previousPrice: 2000,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id:'item-can3', image: hunters, name:'Hunters Choice',
-		currentPrice: 1710, previousPrice: 2000
+		id: uniqid(),
+		image: hunters, name:'Hunters Choice',
+		currentPrice: 1710, previousPrice: 2000,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id:'item-can4', image: hunters2, name:'Hunters Choice Canadian',
-		currentPrice: 1780, previousPrice: 2100
+		id: uniqid(),
+		image: hunters2, name:'Hunters Choice Canadian',
+		currentPrice: 1780, previousPrice: 2100,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id:'item-vroy', image: viceroy, name:'Viceroy  Brandy',
-		currentPrice: 2700, previousPrice: 2930
+		id: uniqid(),
+		image: viceroy, name:'Viceroy  Brandy',
+		currentPrice: 2700, previousPrice: 2930,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id:'item-can2', image: white_walker, name:'White Walker',
-		currentPrice: 1800, previousPrice: 1980
+		id: uniqid(),
+		image: white_walker, name:'White Walker',
+		currentPrice: 1800, previousPrice: 1980,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 ]
 
 export const items = [
 	{
-		id: 'item-1',
+		id: uniqid(),
 		image: black_and_white, name:'Black and white whisky',
-		currentPrice: 1200, previousPrice: 1500
+		currentPrice: 1200, previousPrice: 1500,quantity: 6,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id: 'item-2',
+		id: uniqid(),
 		image: red_label, name:'Jonnie walker red labe;',
-		currentPrice: 1000, previousPrice: 1450
+		currentPrice: 1000, previousPrice: 1450,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id: 'item-3',
+		id: uniqid(),
 		image: amarula, name:'Amarula',
-		currentPrice: 1400, previousPrice: 1750
+		currentPrice: 1400, previousPrice: 1750,quantity: 1,
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' 
+			+'Officiis ipsum iste repellat vitae harum quisquam' 
+			+'facilis reprehenderit illo architecto quos minima '
+			+'nesciunt quia atque enim c'
+			+'orporis exercitationem impedit, voluptatibus soluta.'
 	},
 	{
-		id: 'item-4',
+		id: uniqid(),
 		image: jack_daniels, name:'Jack Daniels',
 		currentPrice: 3100, previousPrice: 3700
 	}

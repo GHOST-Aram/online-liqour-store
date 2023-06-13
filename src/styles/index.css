@@ -889,7 +889,7 @@ button:hover{
   transition: all .3s;
 }
 
-.item:hover, .service:hover, .review:hover, .cart-item:hover{
+.item:hover, .service:hover, .review:hover{
   box-shadow: 2px 2px 5px 2px;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
@@ -913,7 +913,9 @@ button:hover{
   max-width: 300px;
   min-width: 100px;
 }
-
+.m-auto{
+  margin: auto;
+}
 .position-relative{
   position: relative;
 }

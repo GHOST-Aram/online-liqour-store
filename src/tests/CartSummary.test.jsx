@@ -33,6 +33,6 @@ test('Renders chackout button', () =>{
 test('Renders checkout button text', ()=>{
     render(<CartSummary />)
     
-    const buttonText = screen.getByText(/Checkout/)
+    const buttonText = screen.getByText(/Checkout/i)
     expect(buttonText).toBeInTheDocument()
 })

@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react'
 import Section from '../components/Section'
 import CartItem from '../components/CartItem'
-import {wines as items} from '../utils/product'
 import Heading from '../components/Heading'
 import '../styles/index.css'
 import CartSummary from '../components/CartSummary'
 
-const Cart = () => {
-
+const Cart = ({orders, setOrders}) => {
 	useEffect(()=>{
 		document.title = 'Valhala Tavern - Cart'
 	}, [])
@@ -21,9 +19,12 @@ const Cart = () => {
 					>Cart Items</Heading>
 					<div className='flex flex-col gap-4'>
 						{
-							items.slice(0,4).map(item =>
-								<CartItem key={item.id} item = {item}/>
-								)
+							orders.map(item =>
+								<CartItem 
+									key={item.id} 
+									item = {item}
+								/>
+							)
 						}
 					</div>
 				</div>

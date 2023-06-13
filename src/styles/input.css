@@ -35,7 +35,7 @@ button:hover{
     transition: all .3s;
 }
 
-.item:hover, .service:hover, .review:hover, .cart-item:hover{
+.item:hover, .service:hover, .review:hover{
     box-shadow: 2px 2px 5px 2px;
     transform: translateY(-10px);
     transition: all .3s;
