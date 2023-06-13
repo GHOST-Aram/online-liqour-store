@@ -4,8 +4,8 @@ import Navigation from './Navigation'
 
 const Header = () => {
   return (
-    <header>
-        <div className="container flex flex-col items-center md:flex-row lg:flex-row lg:justify-between">
+    <header >
+        <div className="container py-4 flex flex-col items-center md:flex-row lg:flex-row lg:justify-between">
             <Logo />
             <Navigation />
         </div>

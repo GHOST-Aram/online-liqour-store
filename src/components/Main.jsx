@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Main = () => {
+const Main = ({children}) => {
   return (
-    <div>Main</div>
+    <main aria-atomic='true' aria-live='polite'>{children}</main>
   )
 }
 

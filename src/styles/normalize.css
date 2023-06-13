@@ -585,7 +585,7 @@ nav li a{
   background-color: #A90B12;
   color: #9ca3af;
 }
-header{
+header, main, footer{
   padding-inline: 1rem;
 }
 header div{
