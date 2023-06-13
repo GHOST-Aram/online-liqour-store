@@ -2,7 +2,6 @@ import CustomerReviews from '../components/CustomerReviews';
 import React, { useEffect } from 'react'
 import '../styles/index.css'
 import Showcase from '../components/Showcase';
-import ShelvedProducts from '../components/ShelvedProducts';
 import OtherServices from '../components/OtherServices';
 import FeaturedBrands from '../components/FeaturedBrands';
 import { items } from '../utils/product';
@@ -21,7 +20,10 @@ const Home = () => {
 			<Showcase/>
 			<Section>
 				<Heading level={2}
-					className={'font-bold my-4 text-slate-300 pl-4 py-2 bg-red-700'}
+					className={
+						'font-bold my-4 text-slate-300'
+						+' pl-4 py-2 bg-red-700'
+					}
 				>{'On Our Shelves and More'}
 				</Heading>
 				<div className="items">

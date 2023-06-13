@@ -605,8 +605,8 @@ video {
   }
 }
 
-.right-0 {
-  right: 0px;
+.m-auto {
+  margin: auto;
 }
 
 .my-2 {
@@ -635,10 +635,6 @@ video {
   margin-top: 2rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .flex {
   display: flex;
 }
@@ -657,6 +653,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-center {
@@ -703,6 +703,10 @@ video {
   border-style: solid;
 }
 
+.border-none {
+  border-style: none;
+}
+
 .border-zinc-900 {
   --tw-border-opacity: 1;
   border-color: rgb(24 24 27 / var(--tw-border-opacity));
@@ -716,11 +720,6 @@ video {
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
-
-.bg-slate-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -766,16 +765,16 @@ video {
   padding-bottom: 1rem;
 }
 
-.pl-2 {
-  padding-left: 0.5rem;
-}
-
 .pl-4 {
   padding-left: 1rem;
 }
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .text-center {
@@ -913,9 +912,7 @@ button:hover{
   max-width: 300px;
   min-width: 100px;
 }
-.m-auto{
-  margin: auto;
-}
+
 .position-relative{
   position: relative;
 }
@@ -974,27 +971,35 @@ button:hover{
     flex-direction: row;
   }
 
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
+  .md\:border-l-2 {
+    border-left-width: 2px;
+  }
+
   .md\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
   }
+
+  .md\:pl-2 {
+    padding-left: 0.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:fixed {
-    position: fixed;
-  }
-
   .lg\:flex {
     display: flex;
   }
 
-  .lg\:w-3\/5 {
-    width: 60%;
-  }
-
   .lg\:w-2\/5 {
     width: 40%;
+  }
+
+  .lg\:w-3\/5 {
+    width: 60%;
   }
 
   .lg\:flex-row {
@@ -1005,8 +1010,16 @@ button:hover{
     justify-content: space-between;
   }
 
+  .lg\:border-l-2 {
+    border-left-width: 2px;
+  }
+
   .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .lg\:pl-2 {
+    padding-left: 0.5rem;
   }
 }
