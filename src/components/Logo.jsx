@@ -5,7 +5,7 @@ import logo_small from '../images/logos/valhala_logo_small.png'
 
 const Logo = () => {
   return (
-    <picture>
+    <picture className='py-4 md:py-0 lg:py-0'>
         <source media="(min-width: 800px)" srcSet={logo_large} />
         <source media="(min-width: 600px)" srcSet={logo_md} />
         <source media="(min-width: 300px)" srcSet={logo_small} />

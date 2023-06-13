@@ -61,6 +61,7 @@ body {
   /* 1 */
   line-height: inherit;
   /* 2 */
+  background-color: #CBD5E1;
 }
 
 /*
@@ -569,4 +570,24 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+*{
+  color: #18181B;
+}
+
+nav li a{
+  padding-inline: 1rem;
+  padding-block: .5rem;
+  font-weight: 600;
+}
+.active{
+  background-color: #A90B12;
+  color: #9ca3af;
+}
+header{
+  padding-inline: 1rem;
+}
+header div{
+  border-bottom: solid 2px #18181B;
 }
