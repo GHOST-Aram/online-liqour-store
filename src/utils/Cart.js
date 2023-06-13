@@ -5,7 +5,13 @@ export class CartHandler{
     }
 
     addNewItem = (item) =>{
-        return [...this.#orders, item]
+        if(!this.#orders.find(
+            element => element.id ===item.id 
+            && element.quantity === item.quantity
+            )){
+            return [...this.#orders, item]
+        }
+        throw Error('Item already exists in the orders list')
     }
     
     calculateOrderToTal = () => {
@@ -33,7 +39,7 @@ export class CartHandler{
     incrementItemQuantity = (item) =>{
         this.#orders.forEach(element => {
             if(element.id === item.id){
-                element.quantity  = element.quantity ++
+                element.quantity ++
             }
         });
         
