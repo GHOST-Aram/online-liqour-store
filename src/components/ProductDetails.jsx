@@ -5,12 +5,21 @@ import Button from './Button'
 import CartItem from './CartItem'
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
+import { CartHandler } from '../utils/Cart'
 
 
 const ProductDetails = ({orders, setOrders}) => {
     const navigate = useNavigate()
     const item = useLocation().state
-    
+    const cart = new CartHandler(orders)
+
+    const addNewItem = (item) =>{
+        try {
+            return setOrders(cart.addNewItem(item))
+        } catch (error) {
+            alert('Item already exists in Shopping Cart')
+        }
+    }
     return (
         <Section>
             <div className="m-auto w-full lg:w-3/5">
@@ -38,7 +47,7 @@ const ProductDetails = ({orders, setOrders}) => {
                             } 
                         >
                             <Button
-                                handleClick={() => setOrders([...orders, item])}
+                                handleClick={() => addNewItem(item)}
                                 >ADD TO CART</Button>
                             <Button
                                 handleClick={() => navigate('/shop')}
