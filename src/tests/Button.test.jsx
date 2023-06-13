@@ -1,16 +1,20 @@
-import {render, screen} from '@testing-library/react'
+import { DocumentTester } from '../utils/DocumentTester'
 import Button from '../components/Button'
 
-test('Renders Button', ()=>{
-    render(<Button></Button>)
+const tester = new DocumentTester()
 
-    const button = screen.getByRole('button')
-    expect(button).toBeInTheDocument()
-})
+tester.testByRole(
+    {
+        message:'Renders button', 
+        component: <Button></Button>,
+        role: 'button'
+    }
+)
 
-test('Renders buttton textContent', ()=>{
-    render(<Button>Order Now</Button>)
-
-    const buttonText = screen.getByText(/Order Now/)
-    expect(buttonText).toBeInTheDocument()
-})
+tester.testByText(
+    {
+        message: 'Renders button textContext', 
+        component: <Button>Order Now</Button>,
+        text: /Order now/i
+    }
+)

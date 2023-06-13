@@ -3,8 +3,10 @@ import React from 'react'
 import Section from './Section'
 import Button from './Button'
 import CartItem from './CartItem'
-import { useNavigate } from 'react-router-dom'
-import { useLocation } from 'react-router-dom'
+import { 
+    useNavigate,
+    useLocation  
+} from 'react-router-dom'
 import { CartHandler } from '../utils/Cart'
 
 
