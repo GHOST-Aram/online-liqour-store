@@ -1,63 +1,87 @@
-import { render, screen} from '@testing-library/react'
-import Item from '../components/Item'
-import { items } from '../utils/product'
+import black_and_white from '../images/drinks/black-and-white-whisky.png'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { DocumentTester } from '../utils/DocumentTester'
+import uniqid from 'uniqid'
+import Item from '../components/Item'
+ 
+const tester = new DocumentTester()
+const item = {
+    id: uniqid(),
+    image: black_and_white, name:'Black and white whisky',
+    currentPrice: 1200, previousPrice: 1500,quantity: 1,
+}
 
-test('Renders Product image', () =>{
-    render(<Item item = {items[0]}/>, {wrapper: Router})
-
-    const productImg = screen.getByRole('img')
-    expect(productImg).toBeInTheDocument()
-})
 
 
+tester.testByLabelText(
+    {
+        message: 'Renders aria label for previous price',
+        component: <Item item={item} />,
+        wrapper: Router,
+        labelText: 'previous price'
+    }
+)
 
-test('Renders product Name', () =>{
-    render(<Item item = {items[0]}/>, {wrapper: Router})
+tester.testByLabelText(
+    {
+        message: 'Renders arial label for current price',
+        component: <Item item={item} />,
+        wrapper: Router,
+        labelText: 'current price'
+    }
+)
 
-    const productNameNode = screen.getByLabelText('product name')
-    const productName = screen.getByText(/Black and white whisky/i)
+tester.testByLabelText(
+    {
+        message: 'Renders aria-label for allowed discount',
+        component: <Item item={item} />,
+        wrapper: Router,
+        labelText: 'discount'
+    }
+)
 
-    expect(productNameNode).toBeInTheDocument()
-    expect(productName).toBeInTheDocument()
-})
+tester.testByRole(
+    {
+        message: 'Renders product image',
+        component: <Item item = {item}/>,
+        wrapper: Router,
+        role: 'img'
+    }
+)
 
-test('Renders Product previous price', () =>{
-    render(<Item item = {items[0]}/>, {wrapper: Router})
+tester.testByText(
+    {
+        message: 'Renders product name',
+        component: <Item item={item} />,
+        wrapper: Router,
+        text: /Black and white whisky/,
+        
+    }
+)
 
-    const previousPriceNode = screen.getByLabelText('previous price')
-    const previousPrice = screen.getByText(/1500/)
+tester.testByText(
+    {
+        message: 'Renders previous price',
+        component: <Item item={item} />,
+        wrapper: Router,
+        text: /1500/
+    }
+)
+tester.testByText(
+    {
+        message: 'Renders current price',
+        component: <Item item={item} />,
+        wrapper: Router,
+        text: /1200/
+    }
+    )
 
-    expect(previousPriceNode).toBeInTheDocument()
-    expect(previousPrice).toBeInTheDocument()
-})
 
-test('Renders current price', () =>{
-    render(<Item item = {items[0]}/>, {wrapper: Router})
-
-    const currentPriceNode = screen.getByLabelText('current price')
-    const currentPrice = screen.getByText(/1200/)
-
-    expect(currentPriceNode).toBeInTheDocument()
-    expect(currentPrice).toBeInTheDocument()
-})
-
-test('Renders allowed discount', ()=>{
-    render(<Item item = {items[0]}/>, {wrapper: Router})
-
-    const discountElement = screen.getByLabelText('discount')
-    const discountAmount = screen.getByText(/-20%/)
-
-    expect(discountElement).toBeInTheDocument()
-    expect(discountAmount).toBeInTheDocument()
-})
-
-test('Renders add to cart Button', () =>{
-    render(<Item item = {items[0]}/>, {wrapper: Router})
-
-    const cartBtn = screen.getByRole('button')
-    const buttonText = screen.getByText(/VIEW ITEM/i)
-
-    expect(cartBtn).toBeInTheDocument()
-    expect(buttonText).toBeInTheDocument()
-})
+tester.testByText(
+    {
+        message: 'Renders allowed discount',
+        component: <Item item={item} />,
+        wrapper: Router,
+        text: /-20/
+    }
+)

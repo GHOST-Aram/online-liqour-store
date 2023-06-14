@@ -1,66 +1,73 @@
-import { render, screen } from '@testing-library/react'
 import LocationAddress from '../components/LocationAddress'
+import { DocumentTester } from '../utils/DocumentTester'
 
-test('Renders arial-label for location information', () =>{
-    render(<LocationAddress />)
+const tester = new DocumentTester()
 
-    const addressNode = screen.getByLabelText('location information')
-    expect(addressNode).toBeInTheDocument()
-})
+tester.testByLabelText(
+    {
+        message: 'Renders aria-label for location information',
+        component: <LocationAddress />,
+        labelText: 'location information'
+    }
+)
 
-test('Renders address name', () =>{
-    render(<LocationAddress addressName = {'Nairobi'}/>)
+tester.testByText(
+    {
+        message: 'Renders address name',
+        component: <LocationAddress addressName={'Nairobi'}/>,
+        text: /Nairobi/
+    }
+)
 
-    const addressName = screen.getByText(/Nairobi/)
-    expect(addressName).toBeInTheDocument()
-})
+tester.testByLabelText(
+    {
+        message: 'Renders aria-label for location name',
+        component: <LocationAddress />,
+        labelText: /location name/
+    }
+)
+tester.testByLabelText(
+    {
+        message: 'Renders aria-label for strret address',
+        component: <LocationAddress />,
+        labelText: /street address/ 
+    }
+)
+tester.testByText(
+    {
+        message: 'Renders street address',
+        component: <LocationAddress streetAddress={'Oginga Odinga Street'} />,
+        text: /Oginga Odinga Street/
+    }
+)
 
-test('Renders aria-label for location name', () =>{
-    render(<LocationAddress/>)
+tester.testByLabelText(
+    {
+        message: 'Renders aria-label for phone number',
+        component: <LocationAddress />,
+        labelText: /phone number/
+    }
+)
 
-    const nameNode = screen.getByLabelText(/location name/)
-    expect(nameNode).toBeInTheDocument()
-})
+tester.testByText(
+    {
+        message: 'Renders phone number',
+        component: <LocationAddress phone={'0796699806'} />,
+        text: /0796699806/
+    }
+)
 
-test('Renders street address', () =>{
-    render(<LocationAddress streetAddress = {'Oginga Oding Street'} />)
-
-    const locationNode = screen.getByText(/Oginga Oding Street/)
-    expect(locationNode).toBeInTheDocument()
-})
-
-test('Renders aria-label for street address', () =>{
-    render(<LocationAddress />)
-
-    const locationNode = screen.getByLabelText(/street address/)
-    expect(locationNode).toBeInTheDocument()
-
-})
-
-test('Renders phone number', () =>{
-    render(<LocationAddress phone = {'0796699806'} />)
-
-    const phone = screen.getByText(/0796699806/)
-    expect(phone).toBeInTheDocument()
-})
-
-test('Renders phone arial-label', () =>{
-    render(<LocationAddress/>)
-
-    const phoneNode = screen.getByLabelText(/phone number/)
-    expect(phoneNode).toBeInTheDocument()
-})
-
-test('Renders email', () =>{
-    render(<LocationAddress email = {'xyz@gmail.com'} />)
-
-    const email = screen.getByText(/xyz@gmail.com/)
-    expect(email).toBeInTheDocument()
-})
-
-test('Renders email aria-label', () =>{
-    render(<LocationAddress />)
-
-    const emailNode = screen.getByLabelText(/email/)
-    expect(emailNode).toBeInTheDocument()
-})
+tester.testByLabelText(
+    {
+        message: 'Renders email aria-label',
+        component: <LocationAddress />,
+        labelText: /email/
+    }
+)
+tester.testByText(
+    {
+        message: 'Renders email',
+        component: <LocationAddress email={'xyz@gmail.com'} />,
+        text: /xyz@gmail.com/
+    }
+)
