@@ -1,16 +1,20 @@
-import { render, screen } from "@testing-library/react";
 import Heading from "../components/Heading";
+import { DocumentTester } from "../utils/DocumentTester";
 
-test('Renders heading element', ()=>{
-    render(<Heading level={1}>Heading</Heading>)
+const tester = new DocumentTester()
 
-    const heading = screen.getByRole('heading')
-    expect(heading).toBeInTheDocument()
-})
+tester.testByRole(
+    {
+        message: 'Renders heading element',
+        component: <Heading level={1}></Heading>,
+        role: 'heading',
+    }
+)
 
-test('Renders Heading textcontent', ()=>{
-    render(<Heading level = {1}>Welcome Home</Heading>)
-
-    const heandingText = screen.getByText(/Welcome Home/)
-    expect(heandingText).toBeInTheDocument()
-})
+tester.testByText(
+    {
+        message: 'Renders Heading textContent',
+        component: <Heading level = {1}>Welcome Home</Heading>,
+        text: /Welcome Home/
+    }
+)
