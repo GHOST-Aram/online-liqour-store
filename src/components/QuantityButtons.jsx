@@ -18,7 +18,6 @@ const QuantityButtons = ({item, orders, setOrders}) => {
 
     useEffect(() =>{
         const quantityBtns = getDecrementButtons()
-        console.log(quantityBtns)
 
         quantityBtns.forEach(btn =>{
             Number(btn.nextElementSibling.textContent) === 1 ?

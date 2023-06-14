@@ -22,6 +22,8 @@ const ProductDetails = ({orders, setOrders}) => {
             alert('Item already exists in Shopping Cart')
         }
     }
+
+    
     return (
         <Section>
             <div className="m-auto w-full lg:w-3/5">
