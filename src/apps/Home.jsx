@@ -1,4 +1,4 @@
-import Main from '../components/Main';
+import CustomerReviews from '../components/CustomerReviews';
 import React, { useEffect } from 'react'
 import Showcase from '../components/Showcase';
 import ShelvedProducts from '../components/ShelvedProducts';
@@ -13,13 +13,14 @@ const Home = () => {
   })
 
 
-  return (
-    <>
-      <Showcase/>
-      <ShelvedProducts />
-      <OtherServices />
-    </>
-  )
+	return (
+		<>
+		<Showcase/>
+		<ShelvedProducts />
+		<OtherServices />
+		<CustomerReviews />
+		</>
+	)
 }
 
 export default Home

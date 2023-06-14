@@ -615,8 +615,16 @@ video {
   margin-bottom: 1rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .flex {
@@ -645,6 +653,10 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-md {
@@ -676,6 +688,11 @@ video {
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-zinc-900 {
@@ -790,7 +807,7 @@ button:hover{
   transition: all .3s;
 }
 
-.item:hover, .service:hover{
+.item:hover, .service:hover, .review:hover{
   box-shadow: 2px 2px 5px 2px;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
@@ -817,6 +834,16 @@ button:hover{
 
 .position-relative{
   position: relative;
+}
+
+.review img{
+  max-width: 100px;
+}
+
+.reviews{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
 .services{

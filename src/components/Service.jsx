@@ -10,7 +10,7 @@ const Service = (props) => {
         workingDays
     } = props
   return (
-    <div className='mt-4 service'>
+    <div className='mt-4 service rounded-md'>
         <h2 aria-label='service name'
             className='font-bold text-slate-300 text-start p-2 bg-red-700'
         >{serviceName}</h2>
