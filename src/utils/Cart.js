@@ -22,31 +22,24 @@ export class CartHandler{
                 )
         }, 0)
     }
-    decrementItemQuantity = (item) => {
-        this.#orders.forEach(element => {
-            if(element.id === item.id && element.quantity > 1){
-                element.quantity --
-            }
-        });
+    decrementItemQuantity = (itemId) => {
         
-        return this.#orders
+        return this.#orders.map(item => 
+            item.id === itemId ? 
+            {...item, quantity: item.quantity > 1 ? item.quantity - 1 : 1}
+             : item)
     }
 
     getTotalQuantity = () =>{
         return this.#orders.reduce((total, item) => total + Number(item.quantity), 0)
     }
 
-    incrementItemQuantity = (item) =>{
-        this.#orders.forEach(element => {
-            if(element.id === item.id){
-                element.quantity ++
-            }
-        });
-        
-        return this.#orders
+    incrementItemQuantity = (itemId) =>{
+        return this.#orders.map(item => 
+            item.id === itemId ? {...item, quantity: item.quantity + 1} : item)
     }
-    removeItem = (item) =>{
-        return this.#orders.filter(element => element.id !== item.id)
+    removeItem = (itemId) =>{
+        return this.#orders.filter(element => element.id !== itemId)
     }
 
 }
