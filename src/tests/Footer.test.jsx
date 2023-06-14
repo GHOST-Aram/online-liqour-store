@@ -1,9 +1,12 @@
-import {render, screen} from '@testing-library/react'
+import { DocumentTester } from '../utils/DocumentTester'
 import Footer from '../components/Footer'
 
-test('Renders <footer>', () =>{
-    render(<Footer/>)
+const tester = new DocumentTester()
 
-    const footerElement = screen.getByRole('contentinfo')
-    expect(footerElement).toBeInTheDocument()
-})
+tester.testByRole(
+    {
+        message: 'Renders footer',
+        component: <Footer/>,
+        role: 'contentinfo'
+    }
+)
