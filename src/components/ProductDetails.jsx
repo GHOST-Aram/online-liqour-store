@@ -11,8 +11,8 @@ import { CartHandler } from '../utils/Cart'
 
 
 const ProductDetails = ({orders, setOrders}) => {
-    const navigate = useNavigate()
     const item = useLocation().state
+    const navigate = useNavigate()
     const cart = new CartHandler(orders)
 
     const addNewItem = (item) =>{
