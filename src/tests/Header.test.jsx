@@ -1,13 +1,17 @@
-import { render, screen } from "@testing-library/react";
 import Header from "../components/Header";
 import { BrowserRouter } from "react-router-dom";
+import { DocumentTester } from "../utils/DocumentTester";
 
-test('Renders <header> element' ,()=>{
-    render(<Header />, {wrapper: BrowserRouter})
+const tester = new DocumentTester()
 
-    const header = screen.getByRole('banner') 
-    expect(header).toBeInTheDocument()
-})
+tester.testByRole(
+    {
+        message: 'Renders header',
+        component: <Header />,
+        wrapper: BrowserRouter,
+        role: 'banner'
+    }
+)
 
 
 
