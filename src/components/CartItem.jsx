@@ -4,7 +4,7 @@ const CartItem = ({item}) => {
 	return (
 		<div aria-label='cart item' 
 			className={'cart-item flex flex-row border-b-2 border-zinc-900'
-				+'lg:flex-row lg:w-3/5 w-full p-2 rounded-md bg-slate-400'}>
+				+'lg:flex-row  w-full p-2 rounded-md bg-slate-400'}>
 			<img src={item.image} alt={item.name} />
 			<div className= {'flex flex-col justify-center gap-12 pl-2'
 				+' border-l-2 border-zinc-900 w-full' 
