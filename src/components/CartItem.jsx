@@ -3,12 +3,12 @@ import {FaMinus, FaPlus} from 'react-icons/fa'
 const CartItem = ({item}) => {
 	return (
 		<div aria-label='cart item' 
-			className={'cart-item flex flex-col md:flex-row border-b-2 border-zinc-900'
-				+'lg:flex-row w-3/5 p-2 rounded-md bg-slate-400'}>
+			className={'cart-item flex flex-row border-b-2 border-zinc-900'
+				+'lg:flex-row lg:w-3/5 w-full p-2 rounded-md bg-slate-400'}>
 			<img src={item.image} alt={item.name} />
-			<div 
-				className= {'flex flex-col justify-center gap-12 pl-2'
-				+' border-l-2 border-zinc-900 w-full' }>
+			<div className= {'flex flex-col justify-center gap-12 pl-2'
+				+' border-l-2 border-zinc-900 w-full' 
+			}>
 				<h1 aria-label='name'className='font-bold text-red-700'>{item.name}</h1>
 				<div className='flex flex-row justify-between'>
 					<h2 aria-label='price'className='font-bold'>Ksh. {item.currentPrice}</h2>

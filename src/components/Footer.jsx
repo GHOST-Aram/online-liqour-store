@@ -48,6 +48,10 @@ const Footer = () => {
 							)
 					}	
 				</div>
+				<p aria-label = 'warning' className="text-center text-red-700 text-xs mb-4 mt-4">
+					Drink responsible. Excessive consumption of alcohol is harmful to your health. 
+					Strictly not for sale to persons under the age of 21 yrs.
+				</p>
 				<p className="text-center text-slate-300 text-xs">
 					Copyright &copy; Valahala {new Date().getFullYear()}
 				</p>
