@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from './Button'
 
 const AlertDialog = ({message, closeDialog}) => {
+
+    useEffect(() =>{
+        const closeButton = document.querySelector('#close-alert')
+        closeButton.focus()
+
+        return ()=>closeButton.blur()
+    })
+
     return (
         <div role = 'alertdialog' aria-live='assertive'
            className={
@@ -12,7 +20,7 @@ const AlertDialog = ({message, closeDialog}) => {
             <div className="text-red-700 font-bold py-4">
                 {message}
             </div>
-            <Button handleClick={closeDialog}>Close</Button>
+            <Button id={'close-alert'} handleClick={closeDialog}>Close</Button>
         </div>
     )
 }

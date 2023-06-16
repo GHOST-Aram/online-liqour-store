@@ -23,7 +23,6 @@ const ProductDetails = ({orders, setOrders}) => {
             return setOrders(cart.addNewItem(item))
         } catch (error) {
             setIsItemInCart(true)
-            console.error('Order already addded to cart', error)
         }
     }
 
