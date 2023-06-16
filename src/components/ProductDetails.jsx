@@ -1,9 +1,10 @@
 import Heading from './Heading'
-import React from 'react'
+import React, { useState } from 'react'
 import Section from './Section'
 import Button from './Button'
-import CartItem from './CartItem'
-import { 
+import Alert from './AlertDialog'
+import 
+{ 
     useNavigate,
     useLocation  
 } from 'react-router-dom'
@@ -12,6 +13,7 @@ import ProductPreview from './ProductPreview'
 
 
 const ProductDetails = ({orders, setOrders}) => {
+    const [isItemInCart, setIsItemInCart] = useState(false)
     const item = useLocation().state
     const navigate = useNavigate()
     const cart = new CartHandler(orders)
@@ -20,7 +22,8 @@ const ProductDetails = ({orders, setOrders}) => {
         try {
             return setOrders(cart.addNewItem(item))
         } catch (error) {
-            alert('Item already exists in Shopping Cart')
+            setIsItemInCart(true)
+            console.error('Order already addded to cart', error)
         }
     }
 
@@ -36,7 +39,15 @@ const ProductDetails = ({orders, setOrders}) => {
                 > 
                     Product Details
                 </Heading>
-                <ProductPreview item={item} />    
+                <ProductPreview item={item} /> 
+                <div aria-atomic = 'true'>
+                    { isItemInCart &&
+                    <Alert 
+                        message = {'Item has already been added to the Cart'}
+                        closeDialog={()=>setIsItemInCart(false)}
+                    />
+                    }   
+                </div>
                 <div className={
                     'flex flex-col md:flex-row '
                     +'lg:flex-row lg:justify-between gap-4'
