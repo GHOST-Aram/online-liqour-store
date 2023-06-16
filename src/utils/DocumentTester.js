@@ -12,7 +12,7 @@ export class DocumentTester{
             else
                 render(component)
 
-            expect(screen.getByText(altText)).toBeInTheDocument()
+            expect(screen.getByAltText(altText)).toBeInTheDocument()
         })
     }
 

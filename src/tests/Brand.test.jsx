@@ -1,23 +1,28 @@
-import {render, screen} from '@testing-library/react'
 import Brand from '../components/Brand'
+import { DocumentTester } from '../utils/DocumentTester'
 
-test('Renders image element', () =>{
-    render(<Brand />)
+const tester = new DocumentTester()
 
-    const brandImgElement = screen.getByRole('img')
-    expect(brandImgElement).toBeInTheDocument()
-})
+tester.testByAltText(
+    {
+        message: 'Renders brand alt text',
+        component: <Brand brandName = {'Jonnie Walker'} />,
+        altText: /Jonnie Walker/
+    }
+)
 
-test('Renders brand alt text', () =>{
-    render(<Brand brandName = {'Jonnie Walker'} />)
+tester.testByLabelText(
+    {
+        message: 'Renders aria-lable of brand',
+        component: <Brand />,
+        labelText: /featured brand/
+    }
+)
 
-    const altText = screen.getByAltText(/Jonnie Walker/)
-    expect(altText).toBeInTheDocument()
-})
-
-test('Renders aria-label of brand', () =>{
-    render(<Brand />)
-
-    const brandNode = screen.getByLabelText('featured brand')
-    expect(brandNode).toBeInTheDocument()
-})
+tester.testByRole(
+    {
+        message: 'Renders image element',
+        component: <Brand />,
+        role: /img/
+    }
+)
