@@ -8,7 +8,7 @@ const AlertDialog = ({message, closeDialog}) => {
         closeButton.focus()
 
         return ()=>closeButton.blur()
-    })
+    },[])
 
     return (
         <div role = 'alertdialog' aria-live='assertive'
