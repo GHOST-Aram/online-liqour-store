@@ -14,7 +14,7 @@ const Service = (props) => {
         <h2 aria-label='service name'
             className='font-bold text-slate-300 text-start p-2 bg-red-700'
         >{serviceName}</h2>
-        <img src={serviceImg} alt={serviceName} />
+        <img src={serviceImg} alt=''/>
         <div className='bg-red-700 px-2 py-2'>
             <h3 aria-label='service location'
                 className='font-bold text-slate-300'

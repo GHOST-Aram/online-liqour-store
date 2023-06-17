@@ -1,72 +1,75 @@
-import { screen, render} from "@testing-library/react";
+import {DocumentTester} from '../utils/DocumentTester'
 import Service from "../components/Service";
 
-test('Renders service image element', () =>{
-    render(<Service/>)
+const inDOmTester = new DocumentTester()
 
-    const serviceImg = screen.getByRole('img')
-    expect(serviceImg).toBeInTheDocument()
-})
+inDOmTester.testByRole(
+    {
+        message: 'Renders service image element',
+        component: <Service/>,
+        role: /img/
+    }
+)
 
-test('Renders service alt text', () =>{
-    render(<Service serviceName = {'Recreation'} />)
+inDOmTester.testByText(
+    {
+        message: 'Renders service name',
+        component: <Service serviceName = {'Recreation'}/>,
+        text: /Recreation/
+    }
+)
 
-    const altTextx = screen.getByAltText(/Recreation/)
-    expect(altTextx).toBeInTheDocument()
-})
+inDOmTester.testByLabelText(
+    {
+        message: 'Renders aria-label for service name',
+        component: <Service />,
+        labelText: /service name/
+    }
+)
 
-test('Renders service name', () =>{
-    render(<Service serviceName = {'Recreation'} />)
+inDOmTester.testByText(
+    {
+        message: 'Renders service city location',
+        component: <Service serviceLocation = {'Nairobi'} />,
+        text: /Nairobi/
+    }
+)
 
-    const serviceName = screen.getByText(/Recreation/)
-    expect(serviceName).toBeInTheDocument()
-})
+inDOmTester.testByLabelText(
+    {
+        message: 'Renders aria-label for service location',
+        component: <Service />,
+        labelText: /service location/
+    }
+)
+inDOmTester.testByText(
+    {
+        message: 'Renders service opening days',
+        component: <Service workingDays = {'Monday to Friday'}/>,
+        text: /Monday to Friday/
+    }
+)
 
-test('Renders arial-label for service name', () =>{
-    render(<Service />)
+inDOmTester.testByLabelText(
+    {
+        message: 'Renders aria-label for open days',
+        component: <Service />,
+        labelText: /working days/
+    }
+)
 
-    const serviceNameNode = screen.getByLabelText('service name')
-    expect(serviceNameNode).toBeInTheDocument()
-})
-test('Renders service location details', ()=>{
-    render(<Service serviceLocation = {'Nairobi'} />)
+inDOmTester.testByText(
+    {
+        message: 'Renders working hours',
+        component: <Service workingDays = {'24hrs'} />,
+        text: /24hrs/
+    }
+)
 
-    const location = screen.getByText(/Nairobi/)
-    expect(location).toBeInTheDocument()
-})
-
-test('Renders aria-label for service location', () =>{
-    render(<Service />)
-
-    const locationNode = screen.getByLabelText('service location')
-    expect(locationNode).toBeInTheDocument()
-})
-
-test('Renders open days', () =>{
-    render(<Service workingDays = {'Monday to Friday'} />)
-
-    const workingDays = screen.getByText(/Monday to Friday/)
-    expect(workingDays).toBeInTheDocument()
-})
-
-test('Renders aria-label for open days', ()=>{
-    render(<Service />)
-
-    const openDaysNode = screen.getByLabelText('working days')
-    expect(openDaysNode).toBeInTheDocument()
-})
-
-test('Renders working hours', () =>{
-    render(<Service workingHours = {'24hrs'} />)
-
-    const workingHours = screen.getByText(/24hrs/)
-    expect(workingHours).toBeInTheDocument()
-})
-
-test('Renders arial-label for working hours', () =>{
-    render(<Service />)
-
-    const workingHoursNode = screen.getByLabelText('working hours')
-    expect(workingHoursNode).toBeInTheDocument()
-
-})
+inDOmTester.testByLabelText(
+    {
+        message: 'Renders aria-label for working hours',
+        component: <Service />,
+        labelText: /working hours/
+    }
+)
