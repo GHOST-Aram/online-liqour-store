@@ -1,22 +1,23 @@
-import { screen, render } from "@testing-library/react";
+import {DocumentTester} from '../utils/DocumentTester'
 import QuantityButtons from "../components/QuantityButtons";
-import { BrowserRouter as Router } from "react-router-dom";
+import { DisabilityTester } from '../utils/DisabilityTester';
 
-test('Renders item quantity', () =>{
-    const item = {
-        id: 1, quantity: 1
+const tester = new DocumentTester()
+const disabilityTester = new DisabilityTester()
+
+tester.testByText(
+    {
+        message: 'Renders item Quntity',
+        component: <QuantityButtons item = {{ id: 1, quantity: 1}} />,
+        text: /1/
+
     }
-    render(<QuantityButtons item={item}/>, {wrapper: Router})
+)
 
-    const quantityNode = screen.getByText('1')
-    expect(quantityNode).toBeInTheDocument()
-})
-test('Disables decrement button if quantity not greater than 1', () =>{
-    const item = {
-        id: 1, quantity: 1
+disabilityTester.testByLabelText(
+    {
+        message: 'Disables decrement button if quanitity is not greater than 1',
+        component: <QuantityButtons item={{ id: 1, quantity: 1}} />,
+        labelText: /decrement quantity/,
     }
-    render(<QuantityButtons item={item}/>, {wrapper: Router})
-
-    const decrementbtn = screen.getByLabelText('decrement quantity')
-    expect(decrementbtn).toBeDisabled()
-})
+)
