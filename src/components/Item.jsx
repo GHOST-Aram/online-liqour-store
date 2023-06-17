@@ -8,7 +8,7 @@ const Item = ({item}) => {
     const navigate = useNavigate()
 
     return (
-        <div className='item p-2 rounded-md bg-slate-300'>
+        <div className='item p-2 rounded-md bg-slate-300' aria-label='item'>
             <img src={item.image} alt='' />
             <h2 aria-label='product name'className='font-bold text-red-700 text-start'
             >{item.name}</h2>

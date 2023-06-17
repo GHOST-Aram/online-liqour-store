@@ -3,7 +3,7 @@ import React from 'react'
 const ProductPreview = ({item}) => {
     return (
         <>
-            <div aria-label='cart item' 
+            <div aria-label='item preview' 
                 className={
                     'cart-item flex flex-row border-b-2 border-zinc-900'
                     +'lg:flex-row  w-full p-2 rounded-md bg-slate-300'

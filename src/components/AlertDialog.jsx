@@ -12,9 +12,10 @@ const AlertDialog = ({message, closeDialog}) => {
 
     return (
         <div role = 'alertdialog' aria-live='assertive'
+            id='alert-dialog'
            className={
             'p-4 rounded-md bg-white absolute'+
-            ' left-96 top-44 text-center'
+            ' inset-x-1/4 lg:inset-x-1/3 top-1/4 text-center'
             }
         >
             <div className="text-red-700 font-bold py-4">
