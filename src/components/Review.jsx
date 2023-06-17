@@ -10,7 +10,7 @@ const Review = (props) => {
 			<img 
 				className='rounded-full bg-white'
 				src={customerImage} 
-				alt={customerName} 
+				alt='' 
 			/>
 			<h1 
 				aria-label="customer's name"
