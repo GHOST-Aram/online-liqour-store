@@ -1,19 +1,41 @@
-import { screen, render } from "@testing-library/react";
+import { DocumentTester } from "../utils/DocumentTester";
 import {Navigation} from "../components/Navigation";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
-test('Renders Navigation items', () =>{
-    render(<Navigation/>, {wrapper: BrowserRouter})
+const tester = new DocumentTester()
 
-    const navigation = screen.getByRole('navigation')
-    const homeLink = screen.getByText('Home')
-    const shopLink = screen.getByText('Shop')
-    const cartLink = screen.getByText('Cart')
+tester.testByRole(
+    {
+        message: 'Renders navigation bar',
+        component: <Navigation />,
+        wrapper: Router,
+        role: 'navigation'
+    }
+)
 
-    expect(navigation).toBeInTheDocument()
-    expect(homeLink).toBeInTheDocument()
-    expect(shopLink).toBeInTheDocument()
-    expect(cartLink).toBeInTheDocument()
+tester.testByText(
+    {
+        message: 'Renders Home NavLink',
+        component: <Navigation />,
+        wrapper: Router,
+        text: /Home/
+    }
+)
 
+tester.testByText(
+    {
+        message: 'Renders shop NavLink',
+        component: <Navigation />,
+        wrapper: Router,
+        text: /Shop/
+    }
+)
 
-})
+tester.testByText(
+    {
+        message: 'Renders cart Navlink',
+        component: <Navigation />,
+        wrapper: Router,
+        text: /cart/i
+    }
+)
